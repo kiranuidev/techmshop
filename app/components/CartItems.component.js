@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import { connect } from 'react-redux';
-import Swipeout from 'react-native-swipeout';
+//import Swipeout from 'react-native-swipeout';
 
 import { removeItem } from '../redux/actions/cartActions';
 
@@ -45,7 +45,7 @@ class CartItems extends Component {
         }
         const { item, index } = this.props;
         return (
-            <Swipeout {...swipeSettings}>
+            
                 <View style={styles.container}>
                     
                     <View style={styles.productDes}>
@@ -53,7 +53,7 @@ class CartItems extends Component {
                         <Text style={styles.text}>${(item.cost).toFixed(2)}</Text>
                     </View>
                 </View>
-            </Swipeout>
+            
     );
     }
 
