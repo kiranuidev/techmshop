@@ -12,7 +12,6 @@ import { connect } from 'react-redux';
 export class Cart extends Component {
 	constructor(props) {
 	  super(props);
-	
 	  this.state = {
 	  	opacity: new Animated.Value(1)
 	  };
@@ -23,7 +22,6 @@ export class Cart extends Component {
 	    	this.startAnimation();
 	    }
 	}
-
 	startAnimation(){
 		Animated.timing(this.state.opacity,
 		{
@@ -51,11 +49,11 @@ export class Cart extends Component {
     	const { cartItems } = this.props;
     	let animatedStyle = {opacity: this.state.opacity}
         return (
-            <Animated.View style={[styles.container, animatedStyle]}>
+            
             	<TouchableOpacity onPress={this.onPress}>
             		<Text style={styles.cart}>Your cart: {(cartItems).length} items</Text>
             	</TouchableOpacity>
-            </Animated.View>
+           
         );
     }
 }
@@ -71,7 +69,7 @@ const styles = StyleSheet.create({
 		alignItems: 'center'
 	},
 	cart:{
-		color: 'white',
+		color: 'black',
 		fontSize: 14
 	}
 })
